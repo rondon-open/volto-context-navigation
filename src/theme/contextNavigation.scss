@@ -1,0 +1,103 @@
+/* Main container for context navigation */
+.content-with-sidebar {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Sidebar container */
+.sidebar-navigation {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+/* Main content area */
+.main-content {
+  flex-grow: 1;
+  min-width: 0; /* Prevents content overflow */
+}
+
+/* Context navigation component styling */
+.context-navigation {
+  background-color: #f7f7f7;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+}
+
+/* Navigation header styling */
+.context-navigation-header {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  // font-weight: bold;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+/* List container */
+.context-navigation .ui.list {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation items */
+.context-navigation .item {
+  margin-bottom: 0.5rem;
+  list-style: none;
+}
+
+/* Active navigation item */
+.context-navigation .item.active > .content > a {
+  font-weight: bold;
+  background-color: #e0e0e0;
+}
+
+/* Navigation links */
+.context-navigation a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 3px;
+}
+
+.context-navigation a:hover {
+  background-color: #e9e9e9;
+}
+
+/* Level indentation */
+.context-navigation .item.level-1 {
+  margin-left: 0;
+}
+
+.context-navigation .item.level-2 {
+  margin-left: 1rem;
+}
+
+.context-navigation .item.level-3 {
+  margin-left: 2rem;
+}
+
+/* Active indicator (the arrow icon) */
+.context-navigation .active-indicator {
+  display: flex;
+  align-items: center;
+}
+
+.context-navigation .active-indicator svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .content-with-sidebar {
+    flex-direction: column;
+  }
+
+  .sidebar-navigation {
+    width: 100%;
+  }
+}

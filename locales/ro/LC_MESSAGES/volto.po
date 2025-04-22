@@ -1,0 +1,69 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: volto-context-navigation\n"
+"POT-Creation-Date: 2025-04-21T22:45:47.097Z\n"
+"Last-Translator: Rondon Open\n"
+"Language-Team: Rondon Open\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2)\n"
+"Language-Code: ro\n"
+"Language-Name: Romanian\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: volto\n"
+
+#: components/Blocks/ContextNavigationBlock/Edit
+# defaultMessage: Context Navigation Block
+msgid "Context Navigation Block"
+msgstr "Bloc de navigare contextuală"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Name
+msgid "Name"
+msgstr "Nume"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Root Path
+msgid "root_path"
+msgstr "Cale rădăcină"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Include top node
+msgid "includeTop"
+msgstr "Include nodul de sus"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Current folder only
+msgid "currentFolderOnly"
+msgstr "Numai folderul curent"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Only show the contents of the current folder
+msgid "currentFolderOnlyDescription"
+msgstr "Afișează doar conținutul folderului curent"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Start level
+msgid "topLevel"
+msgstr "Nivel de pornire"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Navigation tree depth
+msgid "bottomLevel"
+msgstr "Adâncimea arborelui de navigare"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Suppress Icons
+msgid "no_icons"
+msgstr "Suprimă pictogramele"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Override thumb scale
+msgid "thumb_scale"
+msgstr "Suprascrie scara miniaturii"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Suppress thumbs
+msgid "no_thumbs"
+msgstr "Suprimă miniaturile"

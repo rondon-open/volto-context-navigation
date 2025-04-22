@@ -1,0 +1,69 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: volto-context-navigation\n"
+"POT-Creation-Date: 2025-04-21T22:45:47.097Z\n"
+"Last-Translator: Rondon Open\n"
+"Language-Team: Rondon Open\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: zh_CN\n"
+"Language-Name: Chinese\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: volto\n"
+
+#: components/Blocks/ContextNavigationBlock/Edit
+# defaultMessage: Context Navigation Block
+msgid "Context Navigation Block"
+msgstr "上下文导航模块"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Name
+msgid "Name"
+msgstr "名称"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Root Path
+msgid "root_path"
+msgstr "根路径"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Include top node
+msgid "includeTop"
+msgstr "包含顶层节点"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Current folder only
+msgid "currentFolderOnly"
+msgstr "仅当前文件夹"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Only show the contents of the current folder
+msgid "currentFolderOnlyDescription"
+msgstr "仅显示当前文件夹的内容"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Start level
+msgid "topLevel"
+msgstr "起始层级"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Navigation tree depth
+msgid "bottomLevel"
+msgstr "导航树深度"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Suppress Icons
+msgid "no_icons"
+msgstr "隐藏图标"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Override thumb scale
+msgid "thumb_scale"
+msgstr "自定义缩略图缩放比例"
+
+#: components/Blocks/ContextNavigationBlock/schema
+# defaultMessage: Suppress thumbs
+msgid "no_thumbs"
+msgstr "隐藏缩略图"
