@@ -1,6 +1,6 @@
 import { withContextNavigation } from './components/theme/View/ContentWithContextNavigation';
 
-import './theme/contextNavigation.scss';
+import './theme/context-navigation.scss';
 
 import ContextNavigationBlockView from './components/Blocks/ContextNavigationBlock/View';
 import ContextNavigationBlockEdit from './components/Blocks/ContextNavigationBlock/Edit';
@@ -12,6 +12,7 @@ const applyConfig = (config) => {
   settings.contextNavigation = {
     params: {
       includeTop: true,
+      topLevel: 1,
       showHidden: false,
       currentFolderOnly: false,
     },
@@ -51,7 +52,7 @@ const applyConfig = (config) => {
   // Disable contextNavigationBlock
   // config.blocks.blocksConfig.contextNavigationBlock.restricted = true;
   // When enabled, global site configuration will be used for this block
-  config.blocks.blocksConfig.contextNavigationBlock.useGlobalConfig = true;
+  config.blocks.blocksConfig.contextNavigationBlock.useGlobalConfig = false;
 
   return config;
 };

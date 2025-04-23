@@ -1,6 +1,6 @@
 {
   "name": "@rondon-open/volto-context-navigation",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "volto-context-navigation: Volto add-on that provides a contextual navigation component",
   "main": "src/index.js",
   "repository": {

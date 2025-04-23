@@ -5,6 +5,8 @@
 
 A Volto add-on that provides a contextual navigation component for your Volto/Plone projects.
 
+![Context Navigation Block](preview.png "Context Navigation Block inside columns block (@eeacms/volto-columns-block) 30/70.")
+
 ## Features
 
 - Contextual navigation component for Volto
@@ -127,50 +129,96 @@ config.settings.contextNavigation.params = {
 };
 ```
 
-## Customizing Styles
+## 🛠️ Customizing Styles
 
 You can easily customize the appearance of the context navigation by overriding the default SCSS styles. Here's how:
 
-### 1. Copy the stylesheet to your theme
+### Default Styles Location
+
+The original style variables and SCSS are located at:
+
+```
+node_modules/@rondon-open/volto-context-navigation/src/theme/
+```
+### 1. **Create a custom SCSS file in your project**
+
+Use the following command to copy the base SCSS file into your own theme folder:
 
 ```bash
 mkdir -p src/theme
-cp node_modules/@rondon-open/volto-context-navigation/src/theme/contextNavigation.scss src/theme/
+cp node_modules/@rondon-open/volto-context-navigation/src/theme/_variables.scss src/theme/context-navigation-custom.scss
 ```
 
-### 2. Modify the copied stylesheet
+### 2. **Edit your custom SCSS file**
 
-Edit the file at `src/theme/contextNavigation.scss` to customize the appearance. The file contains all the default styles that you can modify.
+Modify the values you want to override. For example:
 
-### 3. Import the stylesheet
+```scss
+$context-navigation-sidebar-width: 300px;
+$context-navigation-content-gap: 2rem !default;
+$context-navigation-content-margin: 2rem 0 !default;
+
+$context-navigation-bg: #FFFFFF;
+$context-navigation-border: #e5e5e5 !default;
+$context-navigation-header-color: #333 !default;
+$context-navigation-header-border: #ddd !default;
+$context-navigation-item-active-bg: #e0e0e0 !default;
+$context-navigation-link-hover-bg: #e9e9e9 !default;
+
+$context-navigation-border-radius: 4px !default;
+$context-navigation-item-spacing: 0.5rem !default;
+$context-navigation-padding: 1rem !default;
+
+$context-navigation-breakpoint-mobile: 768px !default;
+
+:root {
+  --context-navigation-sidebar-width: #{$context-navigation-sidebar-width};
+  --context-navigation-content-gap: #{$context-navigation-content-gap};
+  --context-navigation-content-margin: #{$context-navigation-content-margin};
+  --context-navigation-bg: #{$context-navigation-bg};
+  --context-navigation-border: #{$context-navigation-border};
+  --context-navigation-header-color: #{$context-navigation-header-color};
+  --context-navigation-header-border: #{$context-navigation-header-border};
+  --context-navigation-border-radius: #{$context-navigation-border-radius};
+  --context-navigation-item-spacing: #{$context-navigation-item-spacing};
+  --context-navigation-padding: #{$context-navigation-padding};
+  --context-navigation-item-active-bg: #{$context-navigation-item-active-bg};
+  --context-navigation-link-hover-bg: #{$context-navigation-link-hover-bg};
+  --context-navigation-breakpoint-mobile: #{$context-navigation-breakpoint-mobile};
+}
+```
+
+---
+
+## Applying Your Custom Styles
 
 Add this import to either your `src/config.js` or `src/index.js` file:
 
 ```javascript
-import './theme/contextNavigation.scss';
+import './theme/context-navigation-custom.scss';
 ```
 
-### Important Notes
+## Notes
 
-1. The copied SCSS file will not be overwritten during add-on updates
-2. You can completely replace the styling or just modify specific parts
-3. Remember to restart your Volto development server after making style changes
-4. For theme-specific customizations, consider adding your styles to your theme's main SCSS file instead
+- The addon uses CSS Custom Properties (`--context-navigation-*`) for use in React components. Overriding them inside `:root` ensures your values apply globally.
+- You can completely replace the styling or just modify specific parts
 
-## Full Configuration Example
 
-Here's how your configuration might look with custom styles:
+## Example Use Case
 
-```javascript
-// In config.js
-import './theme/contextNavigation.scss';
+Change the sidebar width, background color, and add custom box-shadow to the navigation component:
 
-export default function applyConfig(config) {
-  config.settings.contextNavigation.params = {
-    // ... your params here
-  };
-  
-  return config;
+```scss
+$context-navigation-sidebar-width: 300px;
+$context-navigation-bg: #FFFFFF;
+
+root {
+  --context-navigation-sidebar-width: #{$context-navigation-sidebar-width}; 
+  --context-navigation-bg: #{$context-navigation-bg}; 
+}
+
+.context-navigation {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 ```
 

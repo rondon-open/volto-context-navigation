@@ -1,0 +1,33 @@
+// _variables.scss
+$context-navigation-sidebar-width: 250px !default;
+$context-navigation-content-gap: 2rem !default;
+$context-navigation-content-margin: 2rem 0 !default;
+
+$context-navigation-bg: #f7f7f7 !default;
+$context-navigation-border: #e5e5e5 !default;
+$context-navigation-header-color: #333 !default;
+$context-navigation-header-border: #ddd !default;
+$context-navigation-item-active-bg: #e0e0e0 !default;
+$context-navigation-link-hover-bg: #e9e9e9 !default;
+
+$context-navigation-border-radius: 4px !default;
+$context-navigation-item-spacing: 0.5rem !default;
+$context-navigation-padding: 1rem !default;
+
+$context-navigation-breakpoint-mobile: 768px !default;
+
+:root {
+  --context-navigation-sidebar-width: #{$context-navigation-sidebar-width};
+  --context-navigation-content-gap: #{$context-navigation-content-gap};
+  --context-navigation-content-margin: #{$context-navigation-content-margin};
+  --context-navigation-bg: #{$context-navigation-bg};
+  --context-navigation-border: #{$context-navigation-border};
+  --context-navigation-header-color: #{$context-navigation-header-color};
+  --context-navigation-header-border: #{$context-navigation-header-border};
+  --context-navigation-border-radius: #{$context-navigation-border-radius};
+  --context-navigation-item-spacing: #{$context-navigation-item-spacing};
+  --context-navigation-padding: #{$context-navigation-padding};
+  --context-navigation-item-active-bg: #{$context-navigation-item-active-bg};
+  --context-navigation-link-hover-bg: #{$context-navigation-link-hover-bg};
+  --context-navigation-breakpoint-mobile: #{$context-navigation-breakpoint-mobile};
+}

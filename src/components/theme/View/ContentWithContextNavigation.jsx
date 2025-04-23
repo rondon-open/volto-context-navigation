@@ -5,6 +5,7 @@ import config from '@plone/volto/registry';
 
 const ContentWithContextNavigation = ({ content }) => {
   const params = config.settings.contextNavigation.params;
+
   return (
     <Container className="content-with-sidebar-container">
       <div className="content-with-sidebar">

@@ -1,0 +1,105 @@
+// context-navigation.scss
+@use 'variables' as *;
+
+/* Main container for context navigation */
+.content-with-sidebar {
+  display: flex;
+  gap: var(--context-navigation-content-gap);
+  margin: var(--context-navigation-content-margin);
+}
+
+/* Sidebar container */
+.sidebar-navigation {
+  width: var(--context-navigation-sidebar-width);
+  flex-shrink: 0;
+}
+
+/* Main content area */
+.main-content {
+  flex-grow: 1;
+  min-width: 0; /* Prevents content overflow */
+}
+
+/* Context navigation component styling */
+.context-navigation {
+  background-color: var(--context-navigation-bg);
+  padding: var(--context-navigation-padding);
+  border-radius: var(--context-navigation-border-radius);
+  border: 1px solid var(--context-navigation-border);
+  
+  /* Navigation header styling */
+  &-header {
+    margin: 0 0 var(--context-navigation-padding) 0;
+    font-size: 1.2rem;
+    color: var(--context-navigation-header-color);
+    border-bottom: 1px solid var(--context-navigation-header-border);
+    padding-bottom: var(--context-navigation-item-spacing);
+  }
+  
+  /* List container */
+  .ui.list {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navigation items */
+  .item {
+    margin-bottom: var(--context-navigation-item-spacing);
+    list-style: none;
+    
+    /* Active navigation item */
+    &.active > .content > a {
+      font-weight: bold;
+      background-color: var(--context-navigation-item-active-bg);
+    }
+    
+    /* Level indentation */
+    &.level-1 {
+      margin-left: 0;
+    }
+    
+    &.level-2 {
+      margin-left: var(--context-navigation-padding);
+    }
+    
+    &.level-3 {
+      margin-left: calc(var(--context-navigation-padding) * 2);
+    }
+  }
+  
+  /* Navigation links */
+  a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.3rem var(--context-navigation-item-spacing);
+    border-radius: var(--context-navigation-border-radius) - 1px;
+    
+    &:hover {
+      background-color: var(--context-navigation-link-hover-bg);
+    }
+  }
+  
+  /* Active indicator (the arrow icon) */
+  .active-indicator {
+    display: flex;
+    align-items: center;
+    
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+/* Responsive design for mobile */
+@media (max-width: var(--context-navigation-breakpoint-mobile)) {
+  .content-with-sidebar {
+    flex-direction: column;
+  }
+  
+  .sidebar-navigation {
+    width: 100%;
+  }
+}

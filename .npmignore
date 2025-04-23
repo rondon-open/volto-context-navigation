@@ -1,0 +1,49 @@
+# Development and local configuration files
+.env
+.env.*
+.npmrc
+.prettierrc
+.eslintrc
+.gitignore
+.editorconfig
+
+# Development directories and files
+node_modules/
+dist/test/
+coverage/
+__tests__/
+__mocks__/
+*.test.js
+*.spec.js
+
+# Documentation and support files
+docs/
+examples/
+*.md
+LICENSE
+CHANGELOG.md
+CONTRIBUTING.md
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# System and temporary files
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build and unnecessary config files
+webpack.config.js
+babel.config.js
+jest.config.js
+tsconfig.json
+rollup.config.js
+
+# Other specific files (add as needed)
+preview.png
+preview2.png
